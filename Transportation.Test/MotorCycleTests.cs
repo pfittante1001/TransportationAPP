@@ -23,6 +23,34 @@ namespace Transportation.Test
             //Assert
             Assert.That(response, Is.EqualTo("BMW"));
         }
+        [Test]
+        public void GetTreadCycle_Override_miles_times_2_return_UnSafe()
+        {
+            //Arrange
+            Cycle testCycle = new Cycle();
+
+            //Action
+            
+            string response = testCycle.GetWear(20, 85, 32);
+
+            //Assert
+            Assert.That(response, Is.EqualTo("UnSafe"));
+        }
+
+        [Test]
+        public void GetTreadCycle_Override_miles_times_2_return_Safe()
+        {
+            //Arrange
+            Cycle testCycle = new Cycle();
+
+            //Action
+
+            string response = testCycle.GetWear(150, 85, 32);
+
+            //Assert
+            Assert.That(response, Is.EqualTo("UnSafe"));
+        }
+
 
     }
 }

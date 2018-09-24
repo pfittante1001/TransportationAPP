@@ -22,7 +22,7 @@ namespace Transportation
             return mpg; 
         }
 
-        public string GetWear(int miles, int temp, int tread)
+        public virtual string GetWear(int miles, int temp, int tread)
         {
             string condition = " ";
             if ( temp != 0 )
